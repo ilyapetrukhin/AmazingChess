@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className='app' >
-      Amazing Chess
+      Amazing Chess Start
       <BoardComponent/>
     </div>
   );
