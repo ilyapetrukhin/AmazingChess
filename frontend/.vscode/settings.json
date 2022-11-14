@@ -1,0 +1,7 @@
+{
+    "tslint.jsEnable": false,
+    "tslint.suppressWhileTypeErrorsPresent": false,
+    "tslint.ignoreDefinitionFiles": false,
+    "tslint.exclude": null,
+    "tslint.alwaysShowRuleFailuresAsWarnings": false,
+}
