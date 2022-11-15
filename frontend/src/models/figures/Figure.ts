@@ -1,4 +1,6 @@
+import { Cell } from "../Cell";
 import { Colors } from "../Colors";
+import logo from "../../assets/black-king.png"
 
 export enum FiguresNames {
     FIGURE = 'Фигура',
@@ -12,7 +14,7 @@ export enum FiguresNames {
 
 export class Figure {
     color: Colors;
-    logo: typeof Logo | null;
+    logo: typeof logo | null;
     cell: Cell;
     name: FiguresNames;
     id: number;
@@ -23,5 +25,6 @@ export class Figure {
         this.cell.figure = this;
         this.logo = null;
         this.name = FiguresNames.FIGURE;
+        this.id = Math.random();
     }
 }
