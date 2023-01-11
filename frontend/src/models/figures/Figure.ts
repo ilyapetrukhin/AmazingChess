@@ -10,6 +10,9 @@ export enum FiguresNames {
     QUEEN = 'Ферзь',
     ROCK = 'Ладья',
     BISHOP = 'Слон',
+
+    JUMPER = "Прыгатель",
+    SERVANT = "Служитель"
 }
 
 export class Figure {

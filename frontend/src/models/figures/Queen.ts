@@ -4,7 +4,7 @@ import { Figure, FiguresNames } from "./Figure";
 import whitelogo from "../../assets/white-queen.png"
 import blacklogo from "../../assets/black-queen.png"
 
-export class QUEEN extends Figure {
+export class Queen extends Figure {
 
     constructor(color: Colors, cell: Cell){
         super(color,cell);
