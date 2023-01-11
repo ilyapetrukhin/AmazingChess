@@ -39,3 +39,7 @@
 .white {
   background-color: rgb(226, 209, 178);
 }
+
+.selected {
+  background-color: brown !important;
+}
