@@ -41,5 +41,12 @@
 }
 
 .selected {
-  background-color: brown !important;
+  background-color: brown ;
+}
+
+.available {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: rgb(34, 151, 34);
 }
