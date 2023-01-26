@@ -1,7 +1,16 @@
 {
-    "tslint.jsEnable": false,
-    "tslint.suppressWhileTypeErrorsPresent": false,
-    "tslint.ignoreDefinitionFiles": false,
-    "tslint.exclude": null,
-    "tslint.alwaysShowRuleFailuresAsWarnings": false,
-}
+    "editor.formatOnSave": false,
+    "[javascript]": {
+      "editor.formatOnSave": true
+    },
+    "[typescript]": {
+      "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+      "editor.formatOnSave": true
+    },
+    "prettier.tslintIntegration": true,
+    "prettier.eslintIntegration": true,
+    "prettier.jsxSingleQuote": false,
+    "prettier.singleQuote": true,
+  }

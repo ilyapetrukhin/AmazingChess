@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import BoardComponent from './components/BoardComponent'
-import {Board} from './models/Board'
-import './App.css';
+import { Board } from './models/Board'
+import './App.css'
 
 function App() {
   const [board, setBoard] = useState(new Board())
 
   useEffect(() => {
     restart()
-  },[])
+  }, [])
 
   function restart() {
     const newBoard = new Board()
@@ -18,11 +18,11 @@ function App() {
   }
 
   return (
-    <div className='app'>
+    <div className="app">
       Amazing Chess Start
-      <BoardComponent board={board} setBoard={setBoard}/>
+      <BoardComponent board={board} setBoard={setBoard} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,41 +1,39 @@
-import { Cell } from "../Cell";
-import { Colors } from "../Colors";
-import logo from "../../assets/black-king.png"
+import { Cell } from '../Cell'
+import { Colors } from '../Colors'
+import logo from '../../assets/black-king.png'
 
 export enum FiguresNames {
-    FIGURE = 'Фигура',
-    KING = 'Король',
-    KNIGHT = 'Конь',
-    PAWN = 'Пешка',
-    QUEEN = 'Ферзь',
-    ROCK = 'Ладья',
-    BISHOP = 'Слон',
+  FIGURE = 'Фигура',
+  KING = 'Король',
+  KNIGHT = 'Конь',
+  PAWN = 'Пешка',
+  QUEEN = 'Ферзь',
+  ROCK = 'Ладья',
+  BISHOP = 'Слон',
 
-    JUMPER = "Прыгатель",
-    SERVANT = "Служитель"
+  JUMPER = 'Прыгатель',
+  SERVANT = 'Служитель',
 }
 
 export class Figure {
-    color: Colors;
-    logo: typeof logo | null;
-    cell: Cell;
-    name: FiguresNames;
-    id: number;
+  color: Colors
+  logo: typeof logo | null
+  cell: Cell
+  name: FiguresNames
+  id: number
 
-    constructor(color: Colors, cell: Cell) {
-        this.color = color;
-        this.cell = cell;
-        this.cell.figure = this;
-        this.logo = null;
-        this.name = FiguresNames.FIGURE;
-        this.id = Math.random();
-    }
+  constructor(color: Colors, cell: Cell) {
+    this.color = color
+    this.cell = cell
+    this.cell.figure = this
+    this.logo = null
+    this.name = FiguresNames.FIGURE
+    this.id = Math.random()
+  }
 
-    canMove(target: Cell) : boolean {
-        return true 
-    }
+  canMove(target: Cell): boolean {
+    return true
+  }
 
-    moveFigure(target: Cell) {
-        
-    }
+  moveFigure(target: Cell) {}
 }
