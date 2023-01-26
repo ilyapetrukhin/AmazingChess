@@ -35,5 +35,15 @@ export class Figure {
     return true
   }
 
-  moveFigure(target: Cell) {}
+  moveFigure(target: Cell) : boolean {
+    if (target.figure?.color === this.color) {
+        return false
+    }
+
+    if (target.figure?.name === FiguresNames.KING) {
+        return false
+    }
+
+    return true
+  }
 }
