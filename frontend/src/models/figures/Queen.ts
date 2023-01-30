@@ -24,9 +24,9 @@ export class Queen extends Figure {
       return true    
     }
 
-    // if( this.cell.isEmptyDiagonal(target)) {
-    //   return true    
-    // }
+    if( this.cell.isEmptyDiagonal(target)) {
+      return true    
+    }
 
     return false 
   }
