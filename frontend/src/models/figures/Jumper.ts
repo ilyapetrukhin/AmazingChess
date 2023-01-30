@@ -10,4 +10,11 @@ export class Jumper extends Figure {
     this.logo = color === Colors.BLACK ? blacklogo : whitelogo
     this.name = FiguresNames.JUMPER
   }
+
+  canMove (target: Cell): boolean {
+    if(!super.canMove(target)) {
+      return false 
+    }
+    return true 
+  }
 }
