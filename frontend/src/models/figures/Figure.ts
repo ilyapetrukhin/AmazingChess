@@ -32,18 +32,16 @@ export class Figure {
   }
 
   canMove(target: Cell): boolean {
-    return true
-  }
-
-  moveFigure(target: Cell) : boolean {
     if (target.figure?.color === this.color) {
-        return false
+      return false
     }
 
     if (target.figure?.name === FiguresNames.KING) {
-        return false
+      return false
     }
 
     return true
   }
+
+  moveFigure(target: Cell) {}
 }
