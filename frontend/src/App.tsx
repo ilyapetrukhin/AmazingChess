@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import BoardComponent from './components/BoardComponent'
 import { Board } from './models/Board'
 import './App.css'
+import { useMount } from 'react-use'
 import { Player } from './models/Player'
 import { Colors } from './models/Colors'
+import LostFigures from './components/LostFigures';
 
 function App() {
   const [board, setBoard] = useState(new Board())
-  const [whitePlayer, setWhitePlayer] = useState(new Player(Colors.WHITE))
-  const [blackPlayer, setBlacklayer] = useState(new Player(Colors.BLACK))
   const [currentPlayer, setCurrentPlayer] = useState<Player | null>(null)
+  const [whitePlayer, setWhitePlayer] = useState(new Player(Colors.WHITE))
+  const [blackPlayer, setBlackPlayer] = useState(new Player(Colors.BLACK))
 
-  useEffect(() => {
+  useMount(() => {
     restart()
     setCurrentPlayer(whitePlayer)
-  }, [])
+  })
 
   function restart() {
     const newBoard = new Board()
@@ -28,18 +30,25 @@ function App() {
   }
 
   return (
-    <>
-      <div className="header">Amazing Chess Start</div>
-
-      <div className="app">
-        <BoardComponent
-          board={board}
-          setBoard={setBoard}
-          currentPlayer={currentPlayer}
-          swapPlayer={swapPlayer}
+    <div className="app">
+      Amazing Chess Start
+      <BoardComponent 
+        board={board} 
+        setBoard={setBoard} 
+        currentPlayer={currentPlayer}
+        swapPlayer={swapPlayer}
+      />
+            <div>
+        <LostFigures
+          title="Черные фигуры"
+          figures={board.lostBlackFigures}
+        />
+        <LostFigures
+          title="Белые фигуры"
+          figures={board.lostWhiteFigures}
         />
       </div>
-    </>
+    </div>
   )
 }
 
