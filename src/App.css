@@ -4,11 +4,19 @@
 }
 
 .app {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mr-16 {
+  margin: 0 16px;
 }
 
 .header {
@@ -58,8 +66,9 @@
 }
 
 .lost {
-  height: calc(50vh - 60px);
+  height: calc(50vh - 150px);
+  width: 200px;
   padding: 30px;
-  margin-left: 50px;
+  margin-left: 30px;
   background-color: lightgray;
 }

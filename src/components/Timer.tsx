@@ -38,13 +38,30 @@ const Timer: FC<TimerProps> = ({ currentPlayer, restart }) => {
     restart()
   }
 
+  const addSeconds= () => {
+    setWhiteTime((prev) => prev + 15)
+    setBlackTime((prev) => prev + 15)
+  }
+
   return (
-    <div>
+    <div style={{border: '1px solid green', padding: '6px'}}>
       <div>
-        <button onClick={handleRestart}>Restart game</button>
+        <button onClick={handleRestart} className='mr-16'
+       style={{ padding: '6px'}}
+        >Начать сначала</button>
+        <button onClick={addSeconds}
+         style={{ padding: '6px'}}
+        >Добавить игрокам по 15 секунд</button>
       </div>
-      <h2>Черные - {blackTime}</h2>
-      <h2>Белые - {whiteTime}</h2>
+      <div className='flex-center'
+         style={{ marginTop: '8px'}}
+      
+      >
+        <h2>Черные - {blackTime}</h2>
+        <h2 
+         style={{ margin: '0 15px'}}
+        >Белые - {whiteTime}</h2>
+      </div>
     </div>
   )
 }

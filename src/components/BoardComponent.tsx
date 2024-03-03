@@ -43,7 +43,9 @@ const BoardComponent: FC<BoardProps> = ({ board, setBoard, currentPlayer, swapPl
 
   return (
     <div>
-      <h3>Текущий игрок {currentPlayer?.color}</h3>
+      <h3
+      style={{marginBottom: '15px'}}
+      >Текущий игрок {currentPlayer?.color}</h3>
       <div className="board">
         {board.cells.map((row, index) => (
           <Fragment key={index}>

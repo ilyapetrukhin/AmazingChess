@@ -31,19 +31,22 @@ const App = () => {
   }
 
   return (
-    <div className="app">
-      <Timer restart={restart} currentPlayer={currentPlayer} />
-      <BoardComponent
-        board={board}
-        setBoard={setBoard}
-        currentPlayer={currentPlayer}
-        swapPlayer={swapPlayer}
-      />
-      <div>
-        <LostFigures title="Черные фигуры" figures={board.lostBlackFigures} />
-        <LostFigures title="Белые фигуры" figures={board.lostWhiteFigures} />
-      </div>
-    </div>
+    <>
+        <div className='flex-center'>
+          <Timer restart={restart} currentPlayer={currentPlayer} />
+        </div>
+
+        <div className="app">
+          <BoardComponent
+            board={board}
+            setBoard={setBoard}
+            currentPlayer={currentPlayer}
+            swapPlayer={swapPlayer}
+          />
+            <LostFigures title="Черные фигуры" figures={board.lostBlackFigures} />
+            <LostFigures title="Белые фигуры" figures={board.lostWhiteFigures} />
+        </div>
+    </>
   )
 }
 

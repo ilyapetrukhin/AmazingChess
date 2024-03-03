@@ -24,7 +24,7 @@ module.exports = {
 			'plugin:import/errors',
 			'plugin:import/warnings',
 			'plugin:import/typescript',
-			// 'prettier',
+			'prettier',
 		],
 		parser: '@typescript-eslint/parser',
 		parserOptions: {
@@ -35,6 +35,7 @@ module.exports = {
 				"src"
 			  ],
 			
+			// project: './tsconfig.json',
 			ecmaVersion: 'latest',
 			ecmaFeatures: {
 				jsx: true,
