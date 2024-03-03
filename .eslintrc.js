@@ -11,3 +11,10 @@
 //     ...imports.config.overrides
 // 	],
 // };
+
+module.exports = {
+  "extends": "airbnb",
+  "plugins": [
+      "react"
+  ]
+};
