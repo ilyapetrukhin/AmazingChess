@@ -20,7 +20,7 @@ export class Rock extends Figure {
       return true
     }
 
-    if (this.cell.isEmptyHorizont(target)) {
+    if (this.cell.isEmptyHorizontal(target)) {
       return true
     }
 
