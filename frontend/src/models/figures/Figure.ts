@@ -35,13 +35,13 @@ export class Figure {
     return true
   }
 
-  moveFigure(target: Cell) : boolean {
+  moveFigure(target: Cell): boolean {
     if (target.figure?.color === this.color) {
-        return false
+      return false
     }
 
     if (target.figure?.name === FiguresNames.KING) {
-        return false
+      return false
     }
 
     return true

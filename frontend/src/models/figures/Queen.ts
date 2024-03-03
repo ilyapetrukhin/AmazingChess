@@ -11,23 +11,23 @@ export class Queen extends Figure {
     this.name = FiguresNames.QUEEN
   }
 
-  canMove (target: Cell): boolean {
-    if(!super.canMove(target)) {
-      return false 
+  canMove(target: Cell): boolean {
+    if (!super.canMove(target)) {
+      return false
     }
 
-    if( this.cell.isEmptyVertical(target)) {
-      return true    
+    if (this.cell.isEmptyVertical(target)) {
+      return true
     }
 
-    if( this.cell.isEmptyHorizont(target)) {
-      return true    
+    if (this.cell.isEmptyHorizont(target)) {
+      return true
     }
 
-    if( this.cell.isEmptyDiagonal(target)) {
-      return true    
+    if (this.cell.isEmptyDiagonal(target)) {
+      return true
     }
 
-    return false 
+    return false
   }
 }

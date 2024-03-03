@@ -11,10 +11,10 @@ export class Jumper extends Figure {
     this.name = FiguresNames.JUMPER
   }
 
-  canMove (target: Cell): boolean {
-    if(!super.canMove(target)) {
-      return false 
+  canMove(target: Cell): boolean {
+    if (!super.canMove(target)) {
+      return false
     }
-    return true 
+    return true
   }
 }
