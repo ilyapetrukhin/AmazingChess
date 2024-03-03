@@ -6,6 +6,7 @@
 /build
 
 .prettierrc.js
+.vscode
 
 # misc
 .env.local
