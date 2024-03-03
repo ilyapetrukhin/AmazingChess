@@ -71,7 +71,7 @@ module.exports = {
 						// Остальные импорты: Side effect imports.
 						['^\\u0000'],
 						// Пакеты, связанные с React + пакеты с node_modules
-						['^react', '^next', '^[a-z]', '^@?\\w'],
+						['^react', '^[a-z]', '^@?\\w'],
 						// FSD
 						['^@/views/.*$'],
 						['^@/widgets/.*$'],

@@ -13,25 +13,28 @@ module.exports = {
 		},
 		// Список расширений конфигурации ESLint
 		extends: [
-			'airbnb-base',
-			'airbnb-typescript',
+			// 'airbnb-base',
+			// 'airbnb-typescript',
 			'plugin:@typescript-eslint/recommended',
 			'plugin:react-hooks/recommended',
-			'plugin:@next/next/recommended',
-			'plugin:boundaries/recommended',
+			// 'plugin:@next/next/recommended',
+			// 'plugin:boundaries/recommended',
 			'plugin:react/recommended',
-			'plugin:prettier/recommended',
+			// 'plugin:prettier/recommended',
 			'plugin:import/errors',
 			'plugin:import/warnings',
 			'plugin:import/typescript',
-			'prettier',
+			// 'prettier',
 		],
 		parser: '@typescript-eslint/parser',
 		parserOptions: {
 			sourceType: 'module', // Использование модулей ES6
 			useJSXTextNode: true,
 			project: './tsconfig.eslint.json',
-			// tsconfigRootDir: `./`,
+			tsconfigRootDir: [
+				"src"
+			  ],
+			
 			ecmaVersion: 'latest',
 			ecmaFeatures: {
 				jsx: true,
