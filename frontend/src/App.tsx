@@ -1,25 +1,26 @@
-import { useState } from 'react'
-import BoardComponent from './components/BoardComponent'
-import { Board } from './models/Board'
-import './App.css'
-import { useMount } from 'react-use'
-import { Player } from './models/Player'
-import { Colors } from './models/Colors'
-import LostFigures from './components/LostFigures';
+import { useState} from 'react';
+import "./App.css";
+import BoardComponent from "./components/BoardComponent";
+import {Board} from "./models/Board";
+import {Player} from "./models/Player";
+import {Colors} from "./models/Colors";
+import LostFigures from "./components/LostFigures";
+import Timer from "./components/Timer";
+import { useMount } from 'react-use';
 
-function App() {
+const App = () => {
   const [board, setBoard] = useState(new Board())
-  const [currentPlayer, setCurrentPlayer] = useState<Player | null>(null)
   const [whitePlayer, setWhitePlayer] = useState(new Player(Colors.WHITE))
   const [blackPlayer, setBlackPlayer] = useState(new Player(Colors.BLACK))
+  const [currentPlayer, setCurrentPlayer] = useState<Player | null>(null);
 
   useMount(() => {
     restart()
-    setCurrentPlayer(whitePlayer)
+    setCurrentPlayer(whitePlayer);
   })
 
   function restart() {
-    const newBoard = new Board()
+    const newBoard = new Board();
     newBoard.initCells()
     newBoard.addFigures()
     setBoard(newBoard)
@@ -29,16 +30,21 @@ function App() {
     setCurrentPlayer(currentPlayer?.color === Colors.WHITE ? blackPlayer : whitePlayer)
   }
 
+  console.log('board.lostBlackFigures', board)
+
   return (
     <div className="app">
-      Amazing Chess Start
-      <BoardComponent 
-        board={board} 
-        setBoard={setBoard} 
+      <Timer
+        restart={restart}
+        currentPlayer={currentPlayer}
+      />
+      <BoardComponent
+        board={board}
+        setBoard={setBoard}
         currentPlayer={currentPlayer}
         swapPlayer={swapPlayer}
       />
-            <div>
+      <div>
         <LostFigures
           title="Черные фигуры"
           figures={board.lostBlackFigures}
@@ -49,7 +55,7 @@ function App() {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
