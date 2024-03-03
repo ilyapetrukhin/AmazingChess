@@ -32,7 +32,9 @@ const App = () => {
 
   return (
     <>
-        <Timer restart={restart} currentPlayer={currentPlayer} />
+        <div className='flex-center'>
+          <Timer restart={restart} currentPlayer={currentPlayer} />
+        </div>
 
         <div className="app">
           <BoardComponent

@@ -4,11 +4,19 @@
 }
 
 .app {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mr-16 {
+  margin: 0 16px;
 }
 
 .header {
