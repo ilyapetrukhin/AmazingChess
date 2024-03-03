@@ -1,3 +1,40 @@
+// {
+// 	"extends": "./tsconfig.main.json",
+// }
+
 {
-	"extends": "./tsconfig.main.json",
+	"compilerOptions": {
+	  "target": "es5",
+	  "lib": [
+		"dom",
+		"dom.iterable",
+		"esnext"
+	  ],
+	  "allowJs": true,
+	  "skipLibCheck": true,
+	  "esModuleInterop": true,
+	  "allowSyntheticDefaultImports": true,
+	  "strict": true,
+	  "forceConsistentCasingInFileNames": true,
+	  "noFallthroughCasesInSwitch": true,
+	  "module": "esnext",
+	  "moduleResolution": "node",
+	  "resolveJsonModule": true,
+	  "isolatedModules": true,
+	  "noEmit": true,
+	  "jsx": "react-jsx",
+	 
+	},
+	"include": [
+	  "src"
+	],
+	// "extends": [
+	// 	"plugin:@typescript-eslint/recommended",
+	// 	"plugin:react-hooks/recommended",
+	// 	"plugin:react/recommended",
+	// 	"plugin:import/errors",
+	// 	"plugin:import/warnings",
+	// 	"plugin:import/typescript",
+	// 	"prettier",
+	// ],
 }

@@ -31,17 +31,20 @@ const App = () => {
   }
 
   return (
-    <div className="app">
-      <Timer restart={restart} currentPlayer={currentPlayer} />
-      <BoardComponent
-        board={board}
-        setBoard={setBoard}
-        currentPlayer={currentPlayer}
-        swapPlayer={swapPlayer}
-      />
-        <LostFigures title="Черные фигуры" figures={board.lostBlackFigures} />
-        <LostFigures title="Белые фигуры" figures={board.lostWhiteFigures} />
-    </div>
+    <>
+        <Timer restart={restart} currentPlayer={currentPlayer} />
+
+        <div className="app">
+          <BoardComponent
+            board={board}
+            setBoard={setBoard}
+            currentPlayer={currentPlayer}
+            swapPlayer={swapPlayer}
+          />
+            <LostFigures title="Черные фигуры" figures={board.lostBlackFigures} />
+            <LostFigures title="Белые фигуры" figures={board.lostWhiteFigures} />
+        </div>
+    </>
   )
 }
 
